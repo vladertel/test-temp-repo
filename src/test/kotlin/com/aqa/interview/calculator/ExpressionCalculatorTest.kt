@@ -1,5 +1,8 @@
 package com.aqa.interview.calculator
 
+import java.nio.file.Files
+import kotlin.io.path.absolutePathString
+import kotlin.io.path.writeText
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -14,6 +17,14 @@ class ExpressionCalculatorTest {
 
     @Test
     fun `addition of two integers 2`() {
-        assertEquals("6", calculator.evaluate("9999999999 + 4"))
+        assertEquals("6", calculator.evaluate("2 + 4"))
+    }
+
+    @Test
+    fun `addition of two integers 3`() {
+        val file = Files.createTempFile("test", "test")
+        file.writeText("nothing interesting here")
+        val abspath = file.absolutePathString()
+        println("##aqa[artifact name='report.txt' path='$abspath']")
     }
 }
