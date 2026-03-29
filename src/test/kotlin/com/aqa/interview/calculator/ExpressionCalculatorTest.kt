@@ -11,4 +11,9 @@ class ExpressionCalculatorTest {
     fun `addition of two integers`() {
         assertEquals("3", calculator.evaluate("1 + 2"))
     }
+
+    @Test
+    fun `addition of two integers`() {
+        assertEquals("5", calculator.evaluate("1 + 4"))
+    }
 }
